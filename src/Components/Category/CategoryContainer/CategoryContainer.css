@@ -1,0 +1,14 @@
+.category-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 870px;
+    height: 870px;
+}
+
+.category-title {
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+.category-list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 780px;
+    height: 40px;
+}
+
+.category-items {
+    display: flex;
+    justify-content: center;
+    width: 550px;
+}
+
+.category-item {
+    text-align: center;
+    width: 100px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.category-item.active{
+    background-color: #005082;
+    color: #ffffff;
+}

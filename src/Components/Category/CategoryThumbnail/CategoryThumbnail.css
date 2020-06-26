@@ -1,0 +1,32 @@
+.category-thumbnail {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 848px;
+}
+
+.category-more {
+    width: 838px;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.thumbnail-items {
+    
+}
+
+.thumbnail-item {
+    margin-bottom: 40px;
+    margin-right: 16px;
+    display: inline-block;
+    width: 270px;
+    height: 150px;
+}
+
+.thumbnail-item:nth-child(3n) {
+    margin-right: 0px;
+}
+
