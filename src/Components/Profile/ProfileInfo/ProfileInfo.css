@@ -1,3 +1,11 @@
+@media screen and (max-width:1700px) {
+    .profile-name {
+        display: none;
+    }
+    .profile-intro {
+        display: none;
+    }
+}
 .profile {
     top: 160px;
     left: 25%;

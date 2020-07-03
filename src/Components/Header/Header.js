@@ -8,7 +8,7 @@ function Header() {
             
             <div class="header-container">
                 
-                <a href="#"><img class="dalent-logo" src={DalentLogo}/></a>
+                <a href="/"><img class="dalent-logo" src={DalentLogo}/></a>
                 {/*비로그인 상태
                 a href="/login"><div class="login-text">로그인</div></a>*/}
 
@@ -16,8 +16,8 @@ function Header() {
                 <div class="login-wrapper">
                     <a href="#"><div class="add-work">작품등록</div></a>
                     <div class="user-info">
-                        <div class="user-name">Sun_Gun</div>
-                        <img class="user-profile" src={Ranker}/>
+                        <a href="/mypage"><div class="user-name">Sun_Gun</div></a>
+                        <a href="/mypage"><img class="user-profile" src={Ranker}/></a>
                     </div>
                 </div>
             </div>
