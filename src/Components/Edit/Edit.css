@@ -1,0 +1,10 @@
+.edit {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-title {
+    font-size:20px;
+    margin-bottom: 10px;
+}   

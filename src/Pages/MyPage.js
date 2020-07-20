@@ -1,13 +1,26 @@
-import React from 'react';
-import Header from '../Components/Header/Header';
+import React,{useEffect, useState} from 'react';
 import ProfileContainer from '../Components/Profile/ProfileContainer/ProfileContainer';
+import axios from 'axios';
 
-function Home() {
+function Home({match}) {
+    const [following, setFollowing] = useState(0);
+    const [follower, setFollower] = useState(0);
+    const [user, setUser] = useState({});
+    useEffect(() => {
+        axios.get(`http://3.34.0.219/users/${match.params.name}`)
+        .then(response => setUser(response.data))
+        .catch(err => console.log(err))
+        axios.get(`http://3.34.0.219/followings?nickname=${match.params.name}`)
+        .then(response => setFollowing(response.data))
+        .catch(err => console.log(err))
+        axios.get(`http://3.34.0.219/followers?nickname=${match.params.name}`)
+        .then(response => setFollower(response.data))
+        .catch(err => console.log(err))
+    }, [])
     return(
         <>
-            <Header/>
             <div class="body">
-                <ProfileContainer/>
+                <ProfileContainer userData={user} follower={follower} following={following}/>
             </div>
         </>
     )

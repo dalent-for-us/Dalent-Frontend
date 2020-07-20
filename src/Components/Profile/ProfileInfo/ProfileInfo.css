@@ -11,6 +11,11 @@
     left: 25%;
     position: absolute;
 }
+.profile img {
+    width: 200px;
+    height: 180px;
+    border-radius: 70%;
+}
 .profile-description {
     display: inline-block;
     width:460px;
@@ -36,4 +41,26 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.profile-raiting-items.view {
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+.profile-description-top {
+    display: flex;
+}
+.follow-button {
+    cursor: pointer;
+    margin-left: 50px;
+    color: black;
+    width:120px;
+    text-align: center;
+    line-height: 25px;
+    height:25px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+}
+.gallery {
+    width: 1170px;
+    height: 200px;
 }

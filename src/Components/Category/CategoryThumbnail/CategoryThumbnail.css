@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 848px;
+    width: 860px;
 }
 
 .category-more {
@@ -21,6 +21,11 @@
 .thumbnail-item {
     margin-bottom: 40px;
     margin-right: 16px;
+    display: inline-block;
+    width: 270px;
+    height: 150px;
+}
+.thumbnail-item img{
     display: inline-block;
     width: 270px;
     height: 150px;

@@ -1,25 +1,63 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Header.css';
+import {Link} from 'react-router-dom';
 import DalentLogo from '../../Images/dalent.png';
 import Ranker from '../../Images/ranker.png';
+import cookie from 'react-cookies';
+import axios from 'axios';
+
 function Header() {
+    const [isLogin, setIsLogin] = useState(false);
+    const [userData, setUserData] = useState({});
+    const LogOut = () => {
+        cookie.remove('token');
+        window.location.href="/"
+    }
+    const linkToMyPage = {
+        pathname: `/mypage/${userData.nickname}`,
+        state: {
+            userData: userData
+        }
+    }
+    useEffect(() => {
+        axios.get("http://3.34.0.219/users/me", {
+            headers: {
+                "X-Access-Token": cookie.load('token')
+            }
+        }).then(response => {
+            setIsLogin(true)
+            setUserData(response.data);
+        }).catch(err => {
+            setIsLogin(false)
+            console.log(err);
+        })
+    }, [])
     return (
-        <div class="dalent-header">
-            
+        <div class="dalent-header">      
             <div class="header-container">
                 
-                <a href="/"><img class="dalent-logo" src={DalentLogo}/></a>
-                {/*비로그인 상태
-                a href="/login"><div class="login-text">로그인</div></a>*/}
+                <Link to="/"><img class="dalent-logo" src={DalentLogo}/></Link>
 
                 {/*로그인 상태*/}
-                <div class="login-wrapper">
-                    <a href="#"><div class="add-work">작품등록</div></a>
-                    <div class="user-info">
-                        <a href="/mypage"><div class="user-name">Sun_Gun</div></a>
-                        <a href="/mypage"><img class="user-profile" src={Ranker}/></a>
-                    </div>
-                </div>
+                <>
+                    
+                    { isLogin ?
+                        <div class="login-wrapper">  
+                            <div onClick={LogOut} class="add-work logout">로그아웃</div>
+                            <Link to="/workpost"><div class="add-work">작품등록</div></Link>
+                            <div class="user-info">
+                                <Link to={linkToMyPage}><div class="user-name">{userData.nickname}</div></Link>
+                                <Link to={linkToMyPage}><img class="user-profile" src={userData.profile_image}/></Link>
+                            </div>
+                            
+                        </div>: 
+                        
+                        <Link to="/login"><div class="login-text">로그인</div></Link>
+                    }
+                    
+                </>
+
+                
             </div>
         </div>
     );

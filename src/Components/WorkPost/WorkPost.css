@@ -1,0 +1,53 @@
+.work-post-container {
+    width: 970px;
+    height: 1026px;
+    margin: 100px auto 0px auto;
+}
+.work-post-title {
+    font-size: 36px;
+    text-align: center;
+}
+.work-post-input-items {
+    margin-top: 110px;
+}
+.work-post-input-item {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.work-post-input-item.top {
+    align-items: flex-start;
+}
+.work-post-input-text {
+    display: inline-block;
+    width: 90px;
+    font-size: 24px;
+    margin-right: 50px;
+}
+.work-post-select {
+    padding-left: 20px;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+}
+.work-post-input {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    width: 800px;
+    height: 50px;
+}   
+.input-textarea {
+    font: 400 13.3333px Arial;
+    padding: 20px;
+    font-size: 20px;
+    width: 800px;
+    height: 350px;
+}
+.work-post-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.add-work {
+    cursor: pointer;
+}

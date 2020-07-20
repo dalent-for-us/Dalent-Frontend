@@ -42,6 +42,12 @@
     margin-right: 20px;
 }
 
+.ranker-profile img{
+    border-radius: 70%;
+    width:40px;
+    height: 40px;
+}
+
 .ranker-info {
     margin-right: 56px;
     height: 40px;

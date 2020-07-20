@@ -16,16 +16,17 @@
     height: 80px;
 }
 .login-wrapper {
-    width: 300px;
+    width: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .login-text {
     color: #303030;
     font-size: 20px;
 }
 .add-work {
+    margin-right: 50px;
     color: #ffffff;
     width:120px;
     text-align: center;
@@ -40,5 +41,27 @@
     align-items: center;
 }
 .user-profile {
+    border-radius: 70%;
+    width: 40px;
+    height: 40px;
     margin-left: 10px;
+}
+.user-name {
+    width: 100px;
+    font-size: 20px;
+}
+.add-work.logout {
+    background-color: tomato;
+}
+.add-work.up {
+    margin-top: 20px;
+    background-color: goldenrod;
+}
+.add-work.down {
+    margin-top: 20px;
+    background-color: lightcoral;
+}
+.add-work.download {
+    margin-top: 20px;
+    background-color: royalblue;
 }

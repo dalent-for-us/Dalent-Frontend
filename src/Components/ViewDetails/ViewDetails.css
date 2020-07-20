@@ -1,0 +1,30 @@
+.view-details-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+.view-details {
+    width: 1180px;
+    height: 700px;
+}
+.view-details-title {
+    font-size: 36px;
+    font-weight: bold;
+}
+.view-details-category {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.view-details-thumbnail {
+    margin-top: 70px;
+}
+.view-details-thumbnail img {
+    width: 540px;
+    height: 300px;
+}
+.view-details-contents {
+    line-height: 32px;
+    font-size: 20px;
+    margin-top: 70px;
+}

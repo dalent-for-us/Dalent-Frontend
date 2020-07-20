@@ -1,11 +1,11 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import ProfileInfo from '../ProfileInfo/ProfileInfo';
 import ProfileItem from '../ProfileItem/ProfileItem';
-function ProfileContainer() {
+function ProfileContainer(props) {
     return (
         <div class="profile-container">
-            <ProfileInfo/>
-            <ProfileItem/>
+            <ProfileInfo userData={props.userData} follower={props.follower} following={props.following}/>
+            <ProfileItem userData={props.userData}/>
         </div>
     );
 }
