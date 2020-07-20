@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Dalent-Frontend/static/css/main.b3e0be5e.chunk.css",
+    "main.js": "/Dalent-Frontend/static/js/main.8bd8d578.chunk.js",
+    "main.js.map": "/Dalent-Frontend/static/js/main.8bd8d578.chunk.js.map",
+    "runtime-main.js": "/Dalent-Frontend/static/js/runtime-main.12e4e17c.js",
+    "runtime-main.js.map": "/Dalent-Frontend/static/js/runtime-main.12e4e17c.js.map",
+    "static/js/2.a00e875e.chunk.js": "/Dalent-Frontend/static/js/2.a00e875e.chunk.js",
+    "static/js/2.a00e875e.chunk.js.map": "/Dalent-Frontend/static/js/2.a00e875e.chunk.js.map",
+    "index.html": "/Dalent-Frontend/index.html",
+    "precache-manifest.a4b0c0e0f1849454aaf62b4fabf8ed2b.js": "/Dalent-Frontend/precache-manifest.a4b0c0e0f1849454aaf62b4fabf8ed2b.js",
+    "service-worker.js": "/Dalent-Frontend/service-worker.js",
+    "static/css/main.b3e0be5e.chunk.css.map": "/Dalent-Frontend/static/css/main.b3e0be5e.chunk.css.map",
+    "static/js/2.a00e875e.chunk.js.LICENSE.txt": "/Dalent-Frontend/static/js/2.a00e875e.chunk.js.LICENSE.txt",
+    "static/media/background.png": "/Dalent-Frontend/static/media/background.f8c5ad9c.png",
+    "static/media/post.png": "/Dalent-Frontend/static/media/post.3fab96ae.png",
+    "static/media/profile.png": "/Dalent-Frontend/static/media/profile.c1707cd1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12e4e17c.js",
+    "static/js/2.a00e875e.chunk.js",
+    "static/css/main.b3e0be5e.chunk.css",
+    "static/js/main.8bd8d578.chunk.js"
+  ]
+}
