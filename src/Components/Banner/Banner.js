@@ -12,7 +12,7 @@ function Banner() {
     const onImageChange = (e) => {
         const formData = new FormData();
         formData.append('file', e.target.files[0]);
-        axios.post("http://3.34.0.219/media/files", formData)
+        axios.post("http://3.34.0.219:8080/media/files", formData)
         .then(response => {
             alert('업로드완료')
             setImage(response.data.file_link)
@@ -22,7 +22,7 @@ function Banner() {
         })
     }
     const onPost = () => {
-        axios.put(`http://3.34.0.219/gallery/${userData.nickname}`, {
+        axios.put(`http://3.34.0.219:8080/gallery/${userData.nickname}`, {
             banner_image: image
         }, {
             headers: {
@@ -35,7 +35,7 @@ function Banner() {
         .catch(err => console.log(err))
     }
     useEffect(() => {
-        axios.get("http://3.34.0.219/users/me", {
+        axios.get("http://3.34.0.219:8080/users/me", {
             headers: {
                 "X-Access-Token": cookie.load('token')
             }

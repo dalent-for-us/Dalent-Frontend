@@ -13,7 +13,7 @@ function Register() {
     const [passwordRepeat, setPasswordRepeat] = useState("");
     const RegisterPost = () => {
         console.log(nickname, email, password, passwordRepeat)
-        axios.post("http://3.34.0.219/users", {
+        axios.post("http://3.34.0.219:8080/users", {
             id:email,
             password:password,
             nickname: nickname

@@ -11,22 +11,22 @@ function Home({location}) {
         setWork({})
         if(query.category === undefined) {
             console.log("디자인")
-            axios.get("http://3.34.0.219/works?category=art")
+            axios.get("http://3.34.0.219:8080/works?category=art")
             .then(response => setWork(response.data))
             .catch(err => console.log(err));
         } else if(query.category === "fashion") {
             console.log("패션")
-            axios.get("http://3.34.0.219/works?category=FASHION")
+            axios.get("http://3.34.0.219:8080/works?category=FASHION")
             .then(response => setWork(response.data))
             .catch(err => console.log(err));
         } else if(query.category === "music") {
             console.log("음악")
-            axios.get("http://3.34.0.219/works?category=MUSIC")
+            axios.get("http://3.34.0.219:8080/works?category=MUSIC")
             .then(response => setWork(response.data))
             .catch(err => console.log(err));
         } else if(query.category === "programming") {
             console.log("프밍")
-            axios.get("http://3.34.0.219/works?category=PROGRAMMING")
+            axios.get("http://3.34.0.219:8080/works?category=PROGRAMMING")
             .then(response => setWork(response.data))
             .catch(err => console.log(err));
         }

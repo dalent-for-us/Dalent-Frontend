@@ -26,16 +26,16 @@ function RankingList() {
         }
     ]);
     useEffect(() => {
-        axios.get("http://3.34.0.219/users/ranks/art")
+        axios.get("http://3.34.0.219:8080/users/ranks/art")
         .then(response => setArtRanker(response.data))
         .catch(err => console.log(err))
-        axios.get("http://3.34.0.219/users/ranks/fashion")
+        axios.get("http://3.34.0.219:8080/users/ranks/fashion")
         .then(response => setFashionRanker(response.data))
         .catch(err => console.log(err))
-        axios.get("http://3.34.0.219/users/ranks/programming")
+        axios.get("http://3.34.0.219:8080/users/ranks/programming")
         .then(response => setProgramming(response.data))
         .catch(err => console.log(err))
-        axios.get("http://3.34.0.219/users/ranks/music")
+        axios.get("http://3.34.0.219:8080/users/ranks/music")
         .then(response => setMusic(response.data))
         .catch(err => console.log(err))
     })

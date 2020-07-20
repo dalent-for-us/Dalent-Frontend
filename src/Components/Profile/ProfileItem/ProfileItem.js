@@ -11,17 +11,17 @@ const ProfileItem = (props) => {
     const [fashion, setFashion] = useState({});
     useEffect(() => {
         //디자인
-        axios.get(`http://3.34.0.219/works/users/${props.userData.nickname}?category=art`)
+        axios.get(`http://3.34.0.219:8080/works/users/${props.userData.nickname}?category=art`)
         .then(response => setDesign(response.data))
         .catch(err => console.log(err))
         //프로그래밍
-        axios.get(`http://3.34.0.219/works/users/${props.userData.nickname}?category=programming`)
+        axios.get(`http://3.34.0.219:8080/works/users/${props.userData.nickname}?category=programming`)
         .then(response => setProgramming(response.data))
         .catch(err => console.log(err))
-        axios.get(`http://3.34.0.219/works/users/${props.userData.nickname}?category=fashion`)
+        axios.get(`http://3.34.0.219:8080/works/users/${props.userData.nickname}?category=fashion`)
         .then(response => setFashion(response.data))
         .catch(err => console.log(err))
-        axios.get(`http://3.34.0.219/works/users/${props.userData.nickname}?category=music`)
+        axios.get(`http://3.34.0.219:8080/works/users/${props.userData.nickname}?category=music`)
         .then(response => setMusic(response.data))
         .catch(err => console.log(err))
     }, [props])

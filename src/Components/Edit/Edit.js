@@ -12,7 +12,7 @@ function Edit() {
     const onImageChange = (e) => {
         const formData = new FormData();
         formData.append('file', e.target.files[0]);
-        axios.post("http://3.34.0.219/media/files", formData)
+        axios.post("http://3.34.0.219:8080/media/files", formData)
         .then(response => {
             alert('업로드완료')
             setImage(response.data.file_link)
@@ -22,7 +22,7 @@ function Edit() {
         })
     }
     const onPost = () => {
-        axios.patch("http://3.34.0.219/users/me", {
+        axios.patch("http://3.34.0.219:8080/users/me", {
             introduce: introduce,
             profile_image: image
         }, {

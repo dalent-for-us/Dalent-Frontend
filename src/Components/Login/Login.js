@@ -11,7 +11,7 @@ function Login() {
     const [password, setPassword] = useState("");
     const LoginPost = () => {
         console.log(email, password)
-        axios.post("http://3.34.0.219/auth/login", {
+        axios.post("http://3.34.0.219:8080/auth/login", {
             id:email,
             password:password
         }).then(response => {

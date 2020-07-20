@@ -7,13 +7,13 @@ function Home({match}) {
     const [follower, setFollower] = useState(0);
     const [user, setUser] = useState({});
     useEffect(() => {
-        axios.get(`http://3.34.0.219/users/${match.params.name}`)
+        axios.get(`http://3.34.0.219:8080/users/${match.params.name}`)
         .then(response => setUser(response.data))
         .catch(err => console.log(err))
-        axios.get(`http://3.34.0.219/followings?nickname=${match.params.name}`)
+        axios.get(`http://3.34.0.219:8080/followings?nickname=${match.params.name}`)
         .then(response => setFollowing(response.data))
         .catch(err => console.log(err))
-        axios.get(`http://3.34.0.219/followers?nickname=${match.params.name}`)
+        axios.get(`http://3.34.0.219:8080/followers?nickname=${match.params.name}`)
         .then(response => setFollower(response.data))
         .catch(err => console.log(err))
     }, [])

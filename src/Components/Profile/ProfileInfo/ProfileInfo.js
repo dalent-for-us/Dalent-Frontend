@@ -10,9 +10,9 @@ function ProfileInfo(props) {
     const [isFollowing, setIsFollowing] = useState(false);
     const [gallery, setGallery] = useState('');
     useEffect(() => {
-        axios.get(`http://3.34.0.219/gallery/${props.userData.nickname}`)
+        axios.get(`http://3.34.0.219:8080/gallery/${props.userData.nickname}`)
         .then(response => setGallery(response.data.banner_image))
-        axios.get(`http://3.34.0.219/follow/${props.userData.nickname}`,{
+        axios.get(`http://3.34.0.219:8080/follow/${props.userData.nickname}`,{
             headers: {
                 "X-Access-Token": cookie.load('token')
             }
@@ -23,7 +23,7 @@ function ProfileInfo(props) {
     
     }, [props, isFollowing])
     const onFollow = () => {
-        axios.post(`http://988a7b2eb2e2.ngrok.io/follow`,{},{
+        axios.post(`http://3.34.0.219:8080/follow`,{},{
             params: {
                 target: props.userData.nickname
             },
@@ -38,7 +38,7 @@ function ProfileInfo(props) {
         .catch(err => console.log(err))
     }
     const cancleFollow = () => {
-        axios.delete(`http://988a7b2eb2e2.ngrok.io/follow`,{
+        axios.delete(`http://3.34.0.219:8080/follow`,{
             params: {
                 target: props.userData.nickname
             },

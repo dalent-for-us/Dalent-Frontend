@@ -11,7 +11,7 @@ function WorkPost() {
     const [mediaType, setMediaType] =  useState('image');
     const [content, setContent] =  useState('');
     const onPost = () => {
-        axios.post("http://3.34.0.219/works", {
+        axios.post("http://3.34.0.219:8080/works", {
             category: category,
             title: title,
             content: content,
@@ -34,7 +34,7 @@ function WorkPost() {
     const onThumbnailImage = (e) => {
         const formData = new FormData();
         formData.append('file', e.target.files[0]);
-        axios.post("http://3.34.0.219/media/files", formData)
+        axios.post("http://3.34.0.219:8080/media/files", formData)
         .then(response => {
             alert('업로드 완료');
             setThumbnail(response.data.file_link)
@@ -46,7 +46,7 @@ function WorkPost() {
     const onWork = (e) => {
         const formData = new FormData();
         formData.append('file', e.target.files[0]);
-        axios.post("http://3.34.0.219/media/files", formData)
+        axios.post("http://3.34.0.219:8080/media/files", formData)
         .then(response => {
             alert('업로드 완료');
             setWork(response.data.file_link)

@@ -20,7 +20,7 @@ function Header() {
         }
     }
     useEffect(() => {
-        axios.get("http://3.34.0.219/users/me", {
+        axios.get("http://3.34.0.219:8080/users/me", {
             headers: {
                 "X-Access-Token": cookie.load('token')
             }
